@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Axer DNS Generator</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Tahoma, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        .container {
+            background: rgba(0, 0, 255, 0.3);
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+        }
+        button {
+            background-color: blue;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .dns-output {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>AXER DNS Generator</h1>
+    <div class="container">
+        <h3>ساخته شده توسط <span style="color: yellow;">@Mrrezwa</span></h3>
+        <button onclick="generateDNS()">ساختن DNS</button>
+        <div class="dns-output" id="dnsOutput"></div>
+    </div>
+
+    <script>
+        function generateDNS() {
+            let fixedDNS = "10.202.10.10";
+            let randomDNS = "94.200." + Math.floor(Math.random() * 256) + "." + Math.floor(Math.random() * 256);
+            document.getElementById("dnsOutput").innerHTML = 
+                "📌 DNS ثابت: <b>" + fixedDNS + "</b><br>🌍 DNS امارات: <b>" + randomDNS + "</b>";
+        }
+    </script>
+
+</body>
+</html>
